@@ -1,0 +1,6 @@
+Django==1.11.17
+requests
+bs4
+lxml==4.2.5
+markdownify==0.4.1
+django-markdownx==2.0.28
