@@ -53,6 +53,7 @@ def get_text(soup, rules_list: list=None) -> str or None:
         elif type(rule).__name__ == "dict":
             text = soup.find(attrs=rule)
         if text:
+            """ Почистим html код полученной статьи """
             text = re.sub("^\s+|\n|\r|\s+$", '', str(text))
             text = re.sub("><", '> <', text)
             text = re.sub("<div\s", '<p ', text)
